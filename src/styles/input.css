@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  color: #00b6ff;
+}
+
+.main-bg {
+  background: url(http://www.script-tutorials.com/demos/360/images/stars.png)
+    top center #000;
+}
+
+.max-width {
+  max-width: 100px;
+}
