@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/react-redux-ts-star-wars/static/css/main.0b809aa7.css",
-    "main.js": "/react-redux-ts-star-wars/static/js/main.03e671a2.js",
-    "index.html": "/react-redux-ts-star-wars/index.html",
-    "main.0b809aa7.css.map": "/react-redux-ts-star-wars/static/css/main.0b809aa7.css.map",
-    "main.03e671a2.js.map": "/react-redux-ts-star-wars/static/js/main.03e671a2.js.map"
+    "main.css": "/react-redux-ts-star_wars/static/css/main.0b809aa7.css",
+    "main.js": "/react-redux-ts-star_wars/static/js/main.03e671a2.js",
+    "index.html": "/react-redux-ts-star_wars/index.html",
+    "main.0b809aa7.css.map": "/react-redux-ts-star_wars/static/css/main.0b809aa7.css.map",
+    "main.03e671a2.js.map": "/react-redux-ts-star_wars/static/js/main.03e671a2.js.map"
   },
   "entrypoints": [
     "static/css/main.0b809aa7.css",
