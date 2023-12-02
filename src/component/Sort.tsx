@@ -17,7 +17,7 @@ export const Sort = ({ type }: { type: string }) => {
   const { inputField } = useSelector((state: reducerType) => state.allPeople);
   useEffect(() => {
     !!postQuery && dispatch(statusAction(true));
-  }, [!!postQuery]);
+  }, [dispatch, postQuery]);
 
   const sortHandler = (e: ChangeEvent<HTMLSelectElement>) => {
     searchParams.set('sort', e.target.value);

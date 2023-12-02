@@ -24,7 +24,7 @@ export const CheckBox = ({ item }: { item: FilmType }) => {
       dispatch(changeFilterAction(item.id, true));
       dispatch(statusAction(true));
     }
-  }, []);
+  }, [dispatch, filter, item.id, item.title]);
 
   const checkboxHandler = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target instanceof HTMLInputElement && e.target.checked) {

@@ -37,11 +37,13 @@ export const ItemDetailsInfo: FC<PropsType> = ({ itemDetail }) => {
   if (itemDetail) {
     Object.entries(itemDetail).map(([key, item]) => {
       if (Array.isArray(item) && item.length > 0) {
-        relatedCategories[key as keyof typeof relatedCategories] = item;
+        return (relatedCategories[key as keyof typeof relatedCategories] =
+          item);
       }
+      return null;
     });
   }
-  console.log(relatedCategories);
+
   return (
     <div className="flex flex-wrap justify-center md:justify-start mt-6">
       <img

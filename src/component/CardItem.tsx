@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { reducerType } from '../types';
 import { Spinner } from './readyComponents/Spinner';

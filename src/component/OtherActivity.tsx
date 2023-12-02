@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Spinner } from './readyComponents/Spinner';
 import { Error } from './readyComponents/Error';
 import { OtherActivityItems } from './OtherActivityItems';
@@ -55,7 +55,7 @@ export const OtherActivity: FC<PropsType> = ({ urls, category }) => {
     for (const iterator of urls) {
       getData(iterator);
     }
-  }, []);
+  }, [urls]);
 
   const uniqueArray = relatedCategory.filter((item, index, self) => {
     return self.findIndex((obj) => obj.name === item.name) === index;
@@ -91,6 +91,7 @@ export const OtherActivity: FC<PropsType> = ({ urls, category }) => {
                     />
                   );
                 }
+                return null;
               })}
               {uniqueArray.length > 5
                 ? !show && (

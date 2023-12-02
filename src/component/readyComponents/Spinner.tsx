@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const Spinner = ({ width }: { width?: number }) => {
   return (
     <div

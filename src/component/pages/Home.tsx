@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { NavLink, useSearchParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { reducerType } from '../../types';
@@ -15,7 +14,7 @@ import {
 
 export const Home = () => {
   const dispatch = useDispatch();
-  let [searchParams, setSearchParams] = useSearchParams();
+  let [, setSearchParams] = useSearchParams();
   const { categories, loading } = useSelector(
     (state: reducerType) => state.categories
   );

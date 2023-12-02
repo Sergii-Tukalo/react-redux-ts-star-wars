@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const NoFoundMessage = ({ noFoundWord }: { noFoundWord: string }) => {
   return (
     <div className="text-2xl col-span-12 py-4 md:col-span-10 md:col-start-2 md:py-28 lg:col-span-6 lg:col-start-4 lg:px-10 lg:py-20">

@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useGetCategories } from '../../api/useGetCategories';
 import { NavLink, useLocation, useSearchParams } from 'react-router-dom';
@@ -8,8 +8,7 @@ import {
   setEmptyAllPeople,
   statusAction,
 } from '../../store/reducers/reducerAllPeople';
-import { Categories, reducerType } from '../../types';
-import { useSelector } from 'react-redux';
+import { Categories } from '../../types';
 import { SearchChooseCategory } from '../SearchChooseCategory';
 
 export const Search = ({
@@ -20,7 +19,7 @@ export const Search = ({
   const dispatch = useDispatch();
   const [searchInWhichCategory, setSearchInWhichCategory] =
     useState<string>('');
-  const [showAlert, setShowAlert] = useState<boolean>(false);
+  const [, setShowAlert] = useState<boolean>(false);
   let [searchParams, setSearchParams] = useSearchParams();
   const mySearch = searchParams.get('search') as string;
   const { categories } = useGetCategories('https://swapi.dev/api/');
@@ -31,7 +30,7 @@ export const Search = ({
     !!mySearch &&
       dispatch(statusAction(true)) &&
       dispatch(searchInputAction(mySearch));
-  }, []);
+  }, [dispatch, mySearch]);
 
   return (
     <div className=" relative">

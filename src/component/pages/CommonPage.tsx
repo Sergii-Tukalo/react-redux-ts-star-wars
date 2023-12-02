@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import { useGetLocation } from '../../api/useGetLocation';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { MyBreadcrumbs } from '../BreadCrumbs';
@@ -29,11 +29,11 @@ export const CommonPage: FC<PropsType> = ({ type }) => {
   );
   const countPages = Math.ceil(Number(category?.count) / 10);
   const location = useGetLocation();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const postQuery = searchParams.get('sort') as string;
   const filter = searchParams.get('filter') as string;
   const search = searchParams.get('search') as string;
-  const { allPeople, status, currentPage, filterCategory, error } =
+  const { allPeople, status, currentPage, filterCategory } =
     useGetAllPeople(type);
   const { pathname } = useLocation();
 
@@ -42,11 +42,10 @@ export const CommonPage: FC<PropsType> = ({ type }) => {
 
   const urlFilter = filterCategory
     .filter((item) => {
-      if (filter !== null) {
-        if (filter.split('--').includes(item.title)) {
-          return item;
-        }
+      if (filter !== null && filter.split('--').includes(item.title)) {
+        return item;
       }
+      return null;
     })
     .map((item) => item.url);
 

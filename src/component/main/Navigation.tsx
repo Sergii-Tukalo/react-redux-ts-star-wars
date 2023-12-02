@@ -14,7 +14,7 @@ import { Search } from '../readyComponents/Search';
 
 export const Navigation = () => {
   const [openNav, setOpenNav] = React.useState(false);
-  let [searchParams, setSearchParams] = useSearchParams();
+  let [, setSearchParams] = useSearchParams();
 
   const dispatch = useDispatch();
   const goToPage = () => {

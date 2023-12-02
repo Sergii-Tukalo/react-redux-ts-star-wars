@@ -10,27 +10,27 @@ export const useGetItemDetails = (typeDetail: string, id: number) => {
   const dispatch = useDispatch();
   const { pathname } = useLocation();
 
-  const getPerson = async () => {
-    try {
-      dispatch(loadingAction(true));
-      const res = await axios(`https://swapi.dev/api/${typeDetail}/` + id);
-      const newItem = {
-        ...res.data,
-        category: typeDetail,
-        imgUrl: `https://starwars-visualguide.com/assets/img/${
-          typeDetail === 'people' ? 'characters' : typeDetail
-        }/${id}.jpg`,
-      };
-      dispatch(setItemDetails(newItem));
-      dispatch(loadingAction(false));
-    } catch (error: any) {
-      console.log(error.message);
-    }
-  };
-
   useEffect(() => {
+    const getPerson = async () => {
+      try {
+        dispatch(loadingAction(true));
+        const res = await axios(`https://swapi.dev/api/${typeDetail}/` + id);
+        const newItem = {
+          ...res.data,
+          category: typeDetail,
+          imgUrl: `https://starwars-visualguide.com/assets/img/${
+            typeDetail === 'people' ? 'characters' : typeDetail
+          }/${id}.jpg`,
+        };
+        dispatch(setItemDetails(newItem));
+        dispatch(loadingAction(false));
+      } catch (error: any) {
+        console.log(error.message);
+      }
+    };
+
     getPerson();
-  }, [pathname]);
+  }, [dispatch, id, pathname, typeDetail]);
 
   const data = useSelector((state: reducerType) => state.mainState);
 

@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { SpeciesType, VehiclesType } from '../../types';
+import { FC } from 'react';
+import { VehiclesType } from '../../types';
 
 type PropsType = {
   itemDetail: VehiclesType | null;
