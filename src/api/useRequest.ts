@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { StarshipType, reducerType } from '../types';
 import { useSelector } from 'react-redux';
@@ -10,7 +10,7 @@ export const useRequest = (url: string) => {
   const dispatch = useDispatch();
   const { currentPage } = useSelector((state: reducerType) => state.pagination);
   const { pathname } = useLocation();
-  
+
   const getData = async () => {
     try {
       dispatch(loadingAction(true));

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export const useNameGet = (url: string | undefined) => {
   const [name, setName] = useState<string>('');

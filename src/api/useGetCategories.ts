@@ -3,7 +3,7 @@ import {
   setCategoriesAction,
 } from '../store/reducers/reducerCategories';
 import axios from 'axios';
-import React, { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { reducerType } from '../types';
 import { useSelector } from 'react-redux';
@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 export const useGetCategories = (url: string) => {
   const dispatch = useDispatch();
 
-  const getDataCategories = async () => {
+  const getDataCategories = useCallback(async () => {
     try {
       dispatch(loadingAction(true));
 
@@ -30,12 +30,13 @@ export const useGetCategories = (url: string) => {
       console.log(error.message);
       dispatch(loadingAction(false));
     }
-  };
+  }, [dispatch, url]);
 
   const data = useSelector((state: reducerType) => state.categories);
+
   useEffect(() => {
     getDataCategories();
-  }, []);
+  }, [getDataCategories]);
 
   return data;
 };

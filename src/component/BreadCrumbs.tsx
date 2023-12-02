@@ -15,11 +15,9 @@ export const MyBreadcrumbs: React.FC<PropsType> = ({ pathname }) => {
     (state: reducerType) => state.mainState
   );
 
-  const arrPaths = pathname.split('/').filter((item: string) => {
-    if (item !== '') {
-      return item;
-    }
-  });
+  const arrPaths = pathname
+    .split('/')
+    .filter((item: string) => item !== '' ?? item);
 
   return (
     <nav
@@ -92,6 +90,7 @@ export const MyBreadcrumbs: React.FC<PropsType> = ({ pathname }) => {
                 </li>
               );
             }
+            return null;
           })
         )}
       </ol>
