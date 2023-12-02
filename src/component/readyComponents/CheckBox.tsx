@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect } from 'react';
+import { ChangeEvent, useEffect } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import {
   anotherPageBySortAction,

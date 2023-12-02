@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { MyBreadcrumbs } from './BreadCrumbs';
 import { ItemDetailsInfo } from './ItemDetailsInfo';
 import { useGetItemDetails } from '../api/useGetItemDetails';

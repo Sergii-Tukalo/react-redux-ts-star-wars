@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { PersonType } from '../../types';
 import { NavLink } from 'react-router-dom';
 import { useNameGet } from '../../api/useNameGet';

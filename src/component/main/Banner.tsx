@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const Banner = ({ url, img }: { url: string; img: string }) => {
   return (
     <a href={url}>

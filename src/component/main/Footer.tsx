@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const Footer = () => {
   return (
     <footer className=" shadow bg-black mb-8">

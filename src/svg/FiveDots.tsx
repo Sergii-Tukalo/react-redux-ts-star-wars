@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const FiveDots = ({ active }: { active: boolean }) => {
   return (
     <svg

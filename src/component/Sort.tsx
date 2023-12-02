@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect } from 'react';
+import { ChangeEvent, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import {
   searchInputAction,

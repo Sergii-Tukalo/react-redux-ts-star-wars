@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import { PersonType } from '../types';
 import { PeopleInfo } from './detailPages/PeopleInfo';
 import { OtherActivity } from './OtherActivity';
