@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const defineTypeSortText = (type: string) => {
   return (
     (type === 'people' && 'hight ') ||
