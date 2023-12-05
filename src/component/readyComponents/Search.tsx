@@ -32,15 +32,14 @@ export const Search = ({
       dispatch(statusAction(true)) &&
       dispatch(searchInputAction(mySearch));
   }, [dispatch, mySearch]);
-  console.log(searchInWhichCategory);
 
   const firstButtonRef: any = useRef(null);
   const handleSecondButtonClick = () => {
-    // Trigger click on the first button
     if (firstButtonRef.current) {
       firstButtonRef.current.click();
     }
   };
+
   return (
     <div className=" flex justify-center">
       <div className="relative flex justify-between w-full lg:w-auto">

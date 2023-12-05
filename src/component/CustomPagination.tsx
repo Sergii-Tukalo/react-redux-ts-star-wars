@@ -13,7 +13,6 @@ export const CustomPagination = ({ page }: { page?: number }) => {
   const quantityPages = Math.ceil(
     page === 0 ? allPeople.length / 10 : Number(page) / 10
   );
-  console.log(!page);
 
   return (
     <>

@@ -76,10 +76,7 @@ export const CommonPage: FC<PropsType> = ({ type }) => {
   }
   const [desktopModeToShow, setDesktopModeToShow] = useState<number>(5);
   const [mobileModeToShow, setMobileModeToShow] = useState<number>(2);
-  // console.log(allPeople);
-  // console.log(filteredByCategory, !filteredByCategory.length);
-  // console.log(!searchResult.length);
-  // console.log(!!search);
+
   return (
     <>
       <Banner

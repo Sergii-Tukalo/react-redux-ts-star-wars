@@ -39,6 +39,7 @@ export const OtherActivity: FC<PropsType> = ({ urls, category }) => {
           id,
         },
       ]);
+      setLoading(false);
     } catch (error: any) {
       setError(true);
       setLoading(false);

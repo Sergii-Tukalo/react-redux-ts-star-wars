@@ -30,7 +30,6 @@ export const CheckBox = ({ item }: { item: FilmType }) => {
 
   const checkboxHandler = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target instanceof HTMLInputElement && e.target.checked) {
-      console.log(search.includes('page'));
       searchParams.set(
         'filter',
         checkedItem.map((item) => item.title).join('--') === ''
