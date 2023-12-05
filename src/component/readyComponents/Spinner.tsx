@@ -8,7 +8,7 @@ export const Spinner = ({ width }: { width?: number }) => {
         aria-hidden="true"
         className={`w-${width === undefined ? 10 : width} h-${
           width === undefined ? 10 : width
-        } text-gray-200 animate-spin fill-white`}
+        } text-gray-600 animate-spin fill-white`}
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
