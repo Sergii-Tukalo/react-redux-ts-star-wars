@@ -9,6 +9,7 @@ import {
 } from '../store/reducers/reducerAllPeople';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
+import { useRequest } from './useRequest';
 
 export const useGetAllPeople = (type: string) => {
   const dispatch = useDispatch();
@@ -16,6 +17,12 @@ export const useGetAllPeople = (type: string) => {
   const { status, sortBy } = useSelector(
     (state: reducerType) => state.allPeople
   );
+
+  // const { mainState } = useRequest(
+  //   'https://swapi.dev/api/' + type + '/?page=1'
+  // );
+  // const countRequests = Math.ceil(Number(mainState.category?.count) / 10);
+  // console.log(countRequests);
 
   const getAllPeople = async (numPage: number) => {
     const defaultUrl = `https://swapi.dev/api/${type}/?page=${numPage}`;

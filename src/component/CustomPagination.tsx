@@ -14,8 +14,6 @@ export const CustomPagination = ({ page }: { page?: number }) => {
     page === 0 ? allPeople.length / 10 : Number(page) / 10
   );
 
-  const activePage = currentPage >= quantityPages ? quantityPages : 1;
-
   return (
     <>
       {quantityPages !== 1 ? (
@@ -24,7 +22,7 @@ export const CustomPagination = ({ page }: { page?: number }) => {
             className="pagination"
             color="secondary"
             count={quantityPages}
-            page={activePage}
+            page={currentPage}
             sx={{
               '& .MuiPaginationItem-ellipsis': {
                 color: 'white',

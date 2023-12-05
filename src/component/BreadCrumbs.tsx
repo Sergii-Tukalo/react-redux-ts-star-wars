@@ -21,7 +21,7 @@ export const MyBreadcrumbs: React.FC<PropsType> = ({ pathname }) => {
 
   return (
     <nav
-      className="flex"
+      className="flex mb-6"
       aria-label="Breadcrumb"
     >
       <ol className="inline-flex items-center space-x-1 md:space-x-3 text-base">
