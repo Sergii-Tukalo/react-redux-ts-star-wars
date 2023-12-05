@@ -23,7 +23,7 @@ export const CardItem: FC<PropsCard> = ({ item, category }) => {
   const [error, setError] = useState<boolean>(false);
 
   return (
-    <li className="flex flex-col relative border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <li className="flex flex-col relative border rounded-lg shadow bg-gray-800 border-gray-700">
       {loading && (
         <div className="bg-gray-900 bg-opacity-75 absolute top-0 bottom-0 right-0 left-0 flex justify-center items-center">
           <Spinner />
