@@ -28,7 +28,7 @@ export const MyBreadcrumbs: React.FC<PropsType> = ({ pathname }) => {
         <li className="inline-flex items-baseline">
           <NavLink
             to="/"
-            className="inline-flex items-baseline font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+            className="inline-flex items-baseline font-medium text-gray-400 hover:text-white"
           >
             <svg
               className="w-3 h-3 mr-2.5"
@@ -46,7 +46,7 @@ export const MyBreadcrumbs: React.FC<PropsType> = ({ pathname }) => {
           <li>
             <div className="flex items-baseline">
               <ArrowSvg />
-              <span className="ml-1 font-medium text-gray-100  dark:text-gray-100 ">
+              <span className="ml-1 font-medium text-gray-100 ">
                 {pathname.split('/')[1][0].toUpperCase() +
                   pathname.split('/')[1].slice(1)}
               </span>
