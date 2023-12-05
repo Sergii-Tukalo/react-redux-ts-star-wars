@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.active {
-  color: #00b6ff;
+.nav-item .active {
+  color: #fde047;
 }
 
 .main-bg {

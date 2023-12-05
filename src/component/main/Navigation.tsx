@@ -44,7 +44,7 @@ export const Navigation = () => {
         }}
       >
         <NavLink to="/people">People</NavLink>
-        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
+        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-yellow-400"></span>
       </li>
       <li
         className="nav-item no-underline text-end text-xl group transition duration-300"
@@ -54,7 +54,7 @@ export const Navigation = () => {
         }}
       >
         <NavLink to="/starships">Ships</NavLink>
-        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
+        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-yellow-400"></span>
       </li>
       <li
         className="nav-item no-underline text-end text-xl group transition duration-300"
@@ -64,7 +64,7 @@ export const Navigation = () => {
         }}
       >
         <NavLink to="/planets">Planets</NavLink>
-        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
+        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-yellow-400"></span>
       </li>
       <li
         className="nav-item no-underline text-end text-xl group transition duration-300"
@@ -74,7 +74,7 @@ export const Navigation = () => {
         }}
       >
         <NavLink to="/films">Films</NavLink>
-        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
+        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-yellow-400"></span>
       </li>
       <li
         className="nav-item no-underline text-end text-xl group transition duration-300"
@@ -84,7 +84,7 @@ export const Navigation = () => {
         }}
       >
         <NavLink to="/vehicles">Vehicles</NavLink>
-        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
+        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-yellow-400"></span>
       </li>
       <li
         className="nav-item no-underline text-end text-xl group transition duration-300"
@@ -94,7 +94,7 @@ export const Navigation = () => {
         }}
       >
         <NavLink to="/species">Species</NavLink>
-        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
+        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-yellow-400"></span>
       </li>
     </ul>
   );

@@ -61,7 +61,7 @@ export const MyBreadcrumbs: React.FC<PropsType> = ({ pathname }) => {
                     <ArrowSvg />
                     <NavLink
                       to={`/${item}`}
-                      className="ml-1 font-medium text-gray-700 hover:text-blue-600 md:ml-2 dark:text-gray-400 dark:hover:text-white"
+                      className="ml-1 font-medium text-gray-400 hover:text-white"
                     >
                       {toUpperCaseFirstLetter(item)}
                     </NavLink>
