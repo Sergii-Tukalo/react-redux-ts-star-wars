@@ -16,42 +16,44 @@ export const CustomPagination = ({ page }: { page?: number }) => {
 
   return (
     <>
-      {quantityPages !== 1 && !!page ? (
-        <div className="flex justify-center mb-16 mt-10">
-          <Pagination
-            className="pagination"
-            color="secondary"
-            count={quantityPages}
-            page={currentPage}
-            sx={{
-              '& .MuiPaginationItem-ellipsis': {
-                color: 'white',
-                fontSize: '18px',
-              },
-            }}
-            onChange={(e: any) => {
-              let event: HTMLDivElement = e.target;
-              if (event.innerText) {
-                dispatch(anotherPageBySortAction(Number(event.innerText)));
-              } else {
-                event.getAttribute('data-testid') === 'NavigateBeforeIcon'
-                  ? dispatch(anotherPageBySortAction(currentPage - 1))
-                  : dispatch(anotherPageBySortAction(currentPage + 1));
-              }
-            }}
-            renderItem={(item) => (
-              <PaginationItem
-                style={{
-                  color: 'white',
-                  fontSize: '18px',
+      {quantityPages !== 1
+        ? !!page && (
+            <div className="flex justify-center mb-16 mt-10">
+              <Pagination
+                className="pagination"
+                color="secondary"
+                count={quantityPages}
+                page={currentPage}
+                sx={{
+                  '& .MuiPaginationItem-ellipsis': {
+                    color: 'white',
+                    fontSize: '18px',
+                  },
                 }}
-                component={Button}
-                {...item}
+                onChange={(e: any) => {
+                  let event: HTMLDivElement = e.target;
+                  if (event.innerText) {
+                    dispatch(anotherPageBySortAction(Number(event.innerText)));
+                  } else {
+                    event.getAttribute('data-testid') === 'NavigateBeforeIcon'
+                      ? dispatch(anotherPageBySortAction(currentPage - 1))
+                      : dispatch(anotherPageBySortAction(currentPage + 1));
+                  }
+                }}
+                renderItem={(item) => (
+                  <PaginationItem
+                    style={{
+                      color: 'white',
+                      fontSize: '18px',
+                    }}
+                    component={Button}
+                    {...item}
+                  />
+                )}
               />
-            )}
-          />
-        </div>
-      ) : null}
+            </div>
+          )
+        : null}
     </>
   );
 };

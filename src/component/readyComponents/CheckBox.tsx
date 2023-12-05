@@ -16,20 +16,20 @@ export const CheckBox = ({ item }: { item: FilmType }) => {
   );
   let [searchParams, setSearchParams] = useSearchParams();
   const filter = searchParams.get('filter') as string;
+  const mySearch = searchParams.get('search') as string;
   const dispatch = useDispatch();
   const checkedItem = filterCategory.filter((item) => item.filter && item);
-
   useEffect(() => {
     if (filter !== null && filter.split('--').includes(item.title)) {
       dispatch(changeFilterAction(item.id, true));
       dispatch(statusAction(true));
     }
     !search && dispatch(statusAction(false));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [dispatch, filter, item.id, item.title]);
 
   const checkboxHandler = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target instanceof HTMLInputElement && e.target.checked) {
+      console.log(search.includes('page'));
       searchParams.set(
         'filter',
         checkedItem.map((item) => item.title).join('--') === ''
@@ -53,6 +53,7 @@ export const CheckBox = ({ item }: { item: FilmType }) => {
       if (filter.split('--').length === 1) {
         searchParams.delete('filter');
         setSearchParams(searchParams.toString());
+        // !mySearch && dispatch(statusAction(false));
       }
       dispatch(changeFilterAction(item.id));
     }
