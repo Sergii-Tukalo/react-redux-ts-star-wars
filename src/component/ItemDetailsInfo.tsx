@@ -45,7 +45,7 @@ export const ItemDetailsInfo: FC<PropsType> = ({ itemDetail }) => {
   }
 
   return (
-    <div className="flex flex-wrap justify-center md:justify-start">
+    <div className="flex flex-wrap">
       <img
         className="sm:w-1/2 lg:w-auto"
         src={
