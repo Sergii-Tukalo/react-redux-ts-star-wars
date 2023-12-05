@@ -42,7 +42,7 @@ export const Sort = ({ type }: { type: string }) => {
         id="sort"
         onChange={(e) => sortHandler(e)}
       >
-        <option value="choose">choose sort</option>
+        <option value="choose">select sort</option>
         <option value="low-height">
           {defineTypeSortText(type)}
           (low - height)
