@@ -47,12 +47,12 @@ export const CardItem: FC<PropsCard> = ({ item, category }) => {
       </NavLink>
       <div className="p-2 sm:p-5 mt-auto">
         <NavLink to={`/${category}/${id}`}>
-          <h5 className="mb-1 sm:mb-2 text-md sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-1 sm:mb-2 text-md sm:text-2xl font-bold tracking-tight text-white">
             {name}
           </h5>
         </NavLink>
         <div className="2xl:flex 2xl:justify-between">
-          <p className="mb-1 md:self-end text-sm sm:text-lg text-gray-700 dark:text-gray-400">
+          <p className="mb-2 md:self-end text-sm sm:text-lg text-gray-700 dark:text-gray-400">
             {isPerson(item) && category.includes('people') && (
               <>Height: {item.height}</>
             )}
