@@ -52,7 +52,7 @@ export const CardItem: FC<PropsCard> = ({ item, category }) => {
           </h5>
         </NavLink>
         <div className="2xl:flex 2xl:justify-between">
-          <p className="mb-2 md:self-end text-sm sm:text-lg text-gray-700 dark:text-gray-400">
+          <p className="mb-2 md:self-end text-sm sm:text-lg text-gray-400">
             {isPerson(item) && category.includes('people') && (
               <>Height: {item.height}</>
             )}
