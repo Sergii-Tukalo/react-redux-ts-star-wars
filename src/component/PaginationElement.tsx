@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux';
 import { PaginationItem, Pagination } from '@mui/material';
 import { useGetLocation } from '../api/useGetLocation';
 import { anotherPageAction } from '../store/reducers/reducerPagination';
-import { scrollToTop } from '../utils/scrollToTop';
 
 export const PaginationElement = ({
   paginationType,
@@ -31,6 +30,14 @@ export const PaginationElement = ({
   } else if (paginationType === 'species') {
     data = category;
   }
+
+  const breadcrumb = document.querySelector('.breadcrumb') as HTMLElement;
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: breadcrumb?.offsetTop,
+      behavior: 'smooth',
+    });
+  };
 
   const dispatch = useDispatch();
   const countPages = Math.ceil(Number(data?.count) / 10);

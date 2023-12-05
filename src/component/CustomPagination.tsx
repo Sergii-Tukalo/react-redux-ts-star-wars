@@ -3,9 +3,9 @@ import { reducerType } from '../types';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { anotherPageBySortAction } from '../store/reducers/reducerAllPeople';
-import { scrollToTop } from '../utils/scrollToTop';
 
 export const CustomPagination = ({ page }: { page?: number }) => {
+  const breadcrumb = document.querySelector('.breadcrumb') as HTMLElement;
   const dispatch = useDispatch();
   const { allPeople, currentPage } = useSelector(
     (state: reducerType) => state.allPeople
@@ -14,6 +14,13 @@ export const CustomPagination = ({ page }: { page?: number }) => {
   const quantityPages = Math.ceil(
     page === 0 ? allPeople.length / 10 : Number(page) / 10
   );
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: breadcrumb?.offsetTop,
+      behavior: 'smooth',
+    });
+  };
 
   return (
     <>
