@@ -55,6 +55,6 @@ export const useRequest = (url: string) => {
       top: breadcrumb?.offsetTop,
       behavior: 'smooth',
     });
-  }, [currentPage, dispatch, pathname, url]);
+  }, [breadcrumb?.offsetTop, currentPage, dispatch, pathname, url]);
   return data;
 };

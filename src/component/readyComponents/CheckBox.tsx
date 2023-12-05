@@ -16,7 +16,6 @@ export const CheckBox = ({ item }: { item: FilmType }) => {
   );
   let [searchParams, setSearchParams] = useSearchParams();
   const filter = searchParams.get('filter') as string;
-  const mySearch = searchParams.get('search') as string;
   const dispatch = useDispatch();
   const checkedItem = filterCategory.filter((item) => item.filter && item);
   useEffect(() => {
@@ -25,7 +24,7 @@ export const CheckBox = ({ item }: { item: FilmType }) => {
       dispatch(statusAction(true));
     }
     !search && dispatch(statusAction(false));
-  }, [dispatch, filter, item.id, item.title]);
+  }, [dispatch, filter, item.id, item.title, search]);
 
   const checkboxHandler = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target instanceof HTMLInputElement && e.target.checked) {
