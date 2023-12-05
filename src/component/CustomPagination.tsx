@@ -21,7 +21,7 @@ export const CustomPagination = ({ page }: { page?: number }) => {
             <div className="flex justify-center mb-16 mt-10">
               <Pagination
                 className="pagination"
-                color="secondary"
+                color="primary"
                 count={quantityPages}
                 page={currentPage}
                 sx={{

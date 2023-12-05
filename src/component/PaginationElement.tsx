@@ -38,7 +38,7 @@ export const PaginationElement = ({
     <div className="flex justify-center mb-16 mt-10">
       <Pagination
         className="pagination"
-        color="secondary"
+        color="primary"
         count={!countPages ? 10 : countPages}
         page={Number(location)}
         sx={{
