@@ -49,7 +49,7 @@ export const Search = ({
           placeholder="Search"
           aria-label="Search"
           aria-describedby="button-addon3"
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={(e) => setInputValue(e.target.value.toLowerCase())}
           value={inputValue}
         />
         <button

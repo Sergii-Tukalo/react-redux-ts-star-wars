@@ -13,10 +13,11 @@ export const CustomPagination = ({ page }: { page?: number }) => {
   const quantityPages = Math.ceil(
     page === 0 ? allPeople.length / 10 : Number(page) / 10
   );
+  console.log(!page);
 
   return (
     <>
-      {quantityPages !== 1 ? (
+      {quantityPages !== 1 && !!page ? (
         <div className="flex justify-center mb-16 mt-10">
           <Pagination
             className="pagination"
