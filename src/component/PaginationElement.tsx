@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { PaginationItem, Pagination } from '@mui/material';
 import { useGetLocation } from '../api/useGetLocation';
 import { anotherPageAction } from '../store/reducers/reducerPagination';
+import { scrollToTop } from '../utils/scrollToTop';
 
 export const PaginationElement = ({
   paginationType,
@@ -56,6 +57,7 @@ export const PaginationElement = ({
               ? dispatch(anotherPageAction(currentPage - 1))
               : dispatch(anotherPageAction(currentPage + 1));
           }
+          scrollToTop();
         }}
         renderItem={(item) => (
           <PaginationItem

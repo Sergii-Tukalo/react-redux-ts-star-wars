@@ -3,6 +3,7 @@ import { reducerType } from '../types';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { anotherPageBySortAction } from '../store/reducers/reducerAllPeople';
+import { scrollToTop } from '../utils/scrollToTop';
 
 export const CustomPagination = ({ page }: { page?: number }) => {
   const dispatch = useDispatch();
@@ -39,6 +40,7 @@ export const CustomPagination = ({ page }: { page?: number }) => {
                       ? dispatch(anotherPageBySortAction(currentPage - 1))
                       : dispatch(anotherPageBySortAction(currentPage + 1));
                   }
+                  scrollToTop();
                 }}
                 renderItem={(item) => (
                   <PaginationItem
