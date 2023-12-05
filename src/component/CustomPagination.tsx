@@ -7,7 +7,7 @@ import { anotherPageBySortAction } from '../store/reducers/reducerAllPeople';
 export const CustomPagination = ({ page }: { page?: number }) => {
   const breadcrumb = document.querySelector('.breadcrumb') as HTMLElement;
   const dispatch = useDispatch();
-  const { allPeople, currentPage } = useSelector(
+  const { allPeople, currentPage, status } = useSelector(
     (state: reducerType) => state.allPeople
   );
 
@@ -22,10 +22,12 @@ export const CustomPagination = ({ page }: { page?: number }) => {
     });
   };
 
+  console.log(page);
+
   return (
     <>
       {quantityPages !== 1
-        ? !!page && (
+        ? status && (
             <div className="flex justify-center mb-16 mt-10">
               <Pagination
                 className="pagination"
