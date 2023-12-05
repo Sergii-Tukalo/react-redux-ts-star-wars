@@ -9,7 +9,6 @@ import {
 } from '../store/reducers/reducerAllPeople';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import { useRequest } from './useRequest';
 
 export const useGetAllPeople = (type: string) => {
   const dispatch = useDispatch();

@@ -4,11 +4,10 @@ import { FilmType } from '../types';
 import { useDispatch } from 'react-redux';
 import { Spinner } from '@material-tailwind/react';
 import { resetFilterAction } from '../store/reducers/reducerAllPeople';
-import { useLocation, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 export const Filter = ({ type }: { type: string }) => {
   const dispatch = useDispatch();
-  const { search } = useLocation();
   const { filterCategory } = useGetTypeFilter(type);
   let [searchParams, setSearchParams] = useSearchParams();
   const filter = searchParams.get('filter') as string;
