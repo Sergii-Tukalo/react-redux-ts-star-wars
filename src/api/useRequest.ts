@@ -7,6 +7,7 @@ import { getPeopleAction, loadingAction } from '../store/reducers/reducers';
 import { useLocation } from 'react-router-dom';
 
 export const useRequest = (url: string) => {
+  const breadcrumb = document.querySelector('.breadcrumb') as HTMLElement;
   const dispatch = useDispatch();
   const { currentPage } = useSelector((state: reducerType) => state.pagination);
   const { pathname } = useLocation();
@@ -49,8 +50,9 @@ export const useRequest = (url: string) => {
       }
     };
     getData();
+
     window.scrollTo({
-      top: 0,
+      top: breadcrumb?.offsetTop,
       behavior: 'smooth',
     });
   }, [currentPage, dispatch, pathname, url]);
